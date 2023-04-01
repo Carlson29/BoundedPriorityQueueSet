@@ -13,7 +13,7 @@ import java.util.Objects;
  *
  * @author user
  */
-public class Task {
+public class Task implements Comparable <Task> {
     private String owner;
     private String description;
     private LocalDate deadline;
@@ -90,6 +90,11 @@ public class Task {
     @Override
     public String toString() {
         return "Task{" + "owner=" + owner + ", description=" + description + ", deadline=" + deadline + '}';
+    }
+
+    @Override
+    public int compareTo(Task t) {
+       return this.deadline.compareTo(t.getDeadline());
     }
     
     

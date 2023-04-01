@@ -5,6 +5,8 @@
  */
 package com.mycompany.boundedpriorityqueueset;
 
+import java.util.NoSuchElementException;
+
 /**
  *
  * @author user
@@ -46,10 +48,91 @@ public class BoundedPriorityQueueSet {
         return count==capacity;
     }
     
-    public int add(){
-        
+    public boolean checkDuplicate(Task t){
+        if(isEmpty()==false){
+        Node current=first;
+            for(int i=0; i<size(); i++){
+                if(current.data.equals(t)){
+                    return true;
+                }
+                current=current.next;
+            }
+        }
+            return false;
     }
-            
+    
+    public int add(Task task){
+        Node newNode=new Node(task);
+        int pos=0;
+         if(isEmpty()==true){
+             first=newNode;
+             count++;
+         }
+         
+         else if(checkDuplicate(task)==true){
+             throw new DuplicateElementException("Already in queue");
+         }
+         
+         else{
+             if(count==capacity){
+                 throw new IllegalStateException("Queue is full");
+             }
+          
+             else {
+        if(first.data.getDeadline().compareTo(task.getDeadline())>=0){
+            newNode.next=first;
+            first=newNode;
+            count++;
+            return 0;
+        }
+       /* else if(first.data.getDeadline().compareTo(task.getDeadline())==0){
+           newNode.next=first.next;
+           first.next=newNode;
+        }*/
+
+        else if(last.data.getDeadline().compareTo(task.getDeadline())<=0){
+            last.next=newNode;
+            last=newNode;
+            pos=count+1;
+            count++;
+            return pos;
+        }
+        else {
+            Node current=first;
+            Node prev=first;
+            for(int i=0; i<size(); i++){
+                
+                if(current.data.getDeadline().compareTo(task.getDeadline())>=0){
+                    newNode.next=current;
+                    prev.next=newNode;
+                    pos=i-1;
+                    return pos;
+                }
+                prev=current;
+                current=current.next;
+            }
+        }
+         }
+         }
+        
+        return pos;
+    }
+           
+     public Task peek(){
+       if(isEmpty()==true){
+           throw new NoSuchElementException("Queue is empty");
+         }
+      return first.data;
+    }
+     
+     public Task remove(){
+       if(isEmpty()==true){
+           throw new NoSuchElementException("Queue is empty");
+         }
+       Task t=first.data;
+       first=first.next;
+      return t;
+    }
             
     private class Node {
 
