@@ -13,13 +13,14 @@ import java.util.Objects;
  *
  * @author user
  */
-public class Task implements Comparable <Task> {
+public class Task implements Comparable<Task> {
+
     private String owner;
     private String description;
     private LocalDate deadline;
 
     public Task(String owner, String description, LocalDate deadline) {
-        if(deadline.compareTo(LocalDate.now())<=0){
+        if (deadline.compareTo(LocalDate.now()) <= 0) {
             throw new DateTimeException("The date is before current date or it's current date");
         }
         this.owner = owner;
@@ -48,7 +49,7 @@ public class Task implements Comparable <Task> {
     }
 
     public void setDeadline(LocalDate deadline) {
-        if(deadline.compareTo(LocalDate.now())<=0){
+        if (deadline.compareTo(LocalDate.now()) <= 0) {
             throw new DateTimeException("The date is before current date or it's current date");
         }
         this.deadline = deadline;
@@ -94,9 +95,7 @@ public class Task implements Comparable <Task> {
 
     @Override
     public int compareTo(Task t) {
-       return this.deadline.compareTo(t.getDeadline());
+        return this.deadline.compareTo(t.getDeadline());
     }
-    
-    
-   
+
 }
