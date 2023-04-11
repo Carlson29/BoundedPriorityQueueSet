@@ -25,7 +25,6 @@ public class BoundedPriorityQueueSet {
         count = 0;
         capacity = INITIAL_CAPACITY;
     }
-
     public BoundedPriorityQueueSet(int capacity) {
         if (capacity <= 0) {
             throw new IllegalArgumentException("invalid capacity");
@@ -35,19 +34,28 @@ public class BoundedPriorityQueueSet {
         count = 0;
         this.capacity = capacity;
     }
-
+/**Gets the number of Task in Queue
+ @return returns an int
+ **/
     public int size() {
         return count;
     }
-
+/**checks if the queue is empty
+ @return returns a Boolean indicating if queue is empty 
+ **/
     public boolean isEmpty() {
         return count == 0;
     }
-
+/**checks if the queue has reached it's maximum capacity
+ @return returns a Boolean indicating if queue is full 
+ **/
     public boolean isFull() {
         return count == capacity;
     }
-
+/**checks if there is a duplicate task in queue 
+ @param t, takes in a Task to check queue
+ * @return returns a Boolean if duplicate was found
+ **/
     public boolean checkDuplicate(Task t) {
         if (isEmpty() == false) {
             Node current = first;
@@ -60,7 +68,12 @@ public class BoundedPriorityQueueSet {
         }
         return false;
     }
-
+/**Adds Task to the queue in ascending order
+ * @param task, takes in a task to be added
+ * @return returns an int, the position in which the task was inserted
+ * @throws DuplicateElementException if the Task is already present in the queue
+ * @throws IllegalStateException if the queue is already full
+ **/
     public int add(Task task) {
         Node newNode = new Node(task);
         int pos = 0;
@@ -116,14 +129,20 @@ public class BoundedPriorityQueueSet {
 
         return pos;
     }
-
+/**Gets the first Task in the queue
+ @return returns the first Task in the queue
+ * @throws NoSuchElementException if the queue is empty
+ **/
     public Task peek() {
         if (isEmpty() == true) {
             throw new NoSuchElementException("Queue is empty");
         }
         return first.data;
     }
-
+/**Removes the first Task in the queue
+ @return the first Task
+ * @throws NoSuchElementException if the queue is empty
+ **/
     public Task remove() {
         if (isEmpty() == true) {
             throw new NoSuchElementException("Queue is empty");
