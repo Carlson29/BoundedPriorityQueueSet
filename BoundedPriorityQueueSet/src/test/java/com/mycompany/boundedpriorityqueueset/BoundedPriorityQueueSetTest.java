@@ -20,8 +20,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BoundedPriorityQueueSetTest {
 
     /**
-     * Test of size method, of class BoundedPriorityQueueSet.
-     * testing size when there is 1 task
+     * Test of size method, of class BoundedPriorityQueueSet. testing size when
+     * there is 1 task
      */
     @Test
     public void testSize() {
@@ -38,8 +38,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of isEmpty method, of class BoundedPriorityQueueSet.
-     * when queue is not empty
+     * Test of isEmpty method, of class BoundedPriorityQueueSet. when queue is
+     * not empty
      */
     @Test
     public void testIsEmpty_whenQueueIsNotEmpty() {
@@ -56,8 +56,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of isEmpty method, of class BoundedPriorityQueueSet.
-     * when queue is empty
+     * Test of isEmpty method, of class BoundedPriorityQueueSet. when queue is
+     * empty
      */
     @Test
     public void testIsEmpty_whenQueueIsEmpty() {
@@ -71,8 +71,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of isFull method, of class BoundedPriorityQueueSet.
-     * when queue is not full
+     * Test of isFull method, of class BoundedPriorityQueueSet. when queue is
+     * not full
      */
     @Test
     public void testIsFull_whenQueueIsNotFull() {
@@ -88,8 +88,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of isFull method, of class BoundedPriorityQueueSet.
-     * when queue is full
+     * Test of isFull method, of class BoundedPriorityQueueSet. when queue is
+     * full
      */
     @Test
     public void testIsFull_whenQueueIsFull() {
@@ -105,8 +105,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of checkDuplicate method, of class BoundedPriorityQueueSet.
-     * when there is no duplicate
+     * Test of checkDuplicate method, of class BoundedPriorityQueueSet. when
+     * there is no duplicate
      */
     @Test
     public void testCheckDuplicate_whenThereIsNoDuplicate() {
@@ -124,8 +124,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of checkDuplicate method, of class BoundedPriorityQueueSet.
-     * when there is a duplicate
+     * Test of checkDuplicate method, of class BoundedPriorityQueueSet. when
+     * there is a duplicate
      */
     @Test
     public void testCheckDuplicate_whenThereIsADuplicate() {
@@ -141,8 +141,7 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of add method, of class BoundedPriorityQueueSet.
-     * when queue is empty
+     * Test of add method, of class BoundedPriorityQueueSet. when queue is empty
      */
     @Test
     public void testAdd_QueueIsEmpty() {
@@ -157,8 +156,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of add method, of class BoundedPriorityQueueSet.
-     * when Task is already in queue
+     * Test of add method, of class BoundedPriorityQueueSet. when Task is
+     * already in queue
      */
     @Test
     public void testAdd_WhenTaskIsAlreadyInTheQueue() {
@@ -175,8 +174,7 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of add method, of class BoundedPriorityQueueSet.
-     * when queue is full
+     * Test of add method, of class BoundedPriorityQueueSet. when queue is full
      */
     @Test
     public void testAdd_WhenQueueIsFull() {
@@ -194,8 +192,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of add method, of class BoundedPriorityQueueSet.
-     * adding in first position
+     * Test of add method, of class BoundedPriorityQueueSet. adding in first
+     * position
      */
     @Test
     public void testAdd_AddingInTheFirstPosition() {
@@ -214,8 +212,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of add method, of class BoundedPriorityQueueSet.
-     * adding in the last position
+     * Test of add method, of class BoundedPriorityQueueSet. adding in the last
+     * position
      */
     @Test
     public void testAdd_AddingInTheLastPosition() {
@@ -237,8 +235,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of add method, of class BoundedPriorityQueueSet.
-     * adding in the middle of the queue
+     * Test of add method, of class BoundedPriorityQueueSet. adding in the
+     * middle of the queue
      */
     @Test
     public void testAdd_AddingInTheMiddle() {
@@ -264,8 +262,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of add method, of class BoundedPriorityQueueSet.
-     * adding a Task with the same deadline as one already in the queue
+     * Test of add method, of class BoundedPriorityQueueSet. adding a Task with
+     * the same deadline as one already in the queue
      */
     @Test
     public void testAdd_AddingaTaskWithSameDeadline() {
@@ -290,8 +288,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of peek method, of class BoundedPriorityQueueSet.
-     * when queue is empty
+     * Test of peek method, of class BoundedPriorityQueueSet. when queue is
+     * empty
      */
     @Test
     public void testPeek_WhenQueueIsEmpty() {
@@ -304,8 +302,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of peek method, of class BoundedPriorityQueueSet.
-     * when queue is not empty
+     * Test of peek method, of class BoundedPriorityQueueSet. when queue is not
+     * empty
      */
     @Test
     public void testPeek_WhenQueueIsNotEmpty() {
@@ -321,8 +319,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of remove method, of class BoundedPriorityQueueSet.
-     * when queue is not empty
+     * Test of remove method, of class BoundedPriorityQueueSet. when queue is
+     * not empty
      */
     @Test
     public void testRemove_WhenQueueIsNotEmpty() {
@@ -340,8 +338,8 @@ public class BoundedPriorityQueueSetTest {
     }
 
     /**
-     * Test of remove method, of class BoundedPriorityQueueSet.
-     * when queue is empty
+     * Test of remove method, of class BoundedPriorityQueueSet. when queue is
+     * empty
      */
     @Test
     public void testRemove_WhenQueueIsEmpty() {
